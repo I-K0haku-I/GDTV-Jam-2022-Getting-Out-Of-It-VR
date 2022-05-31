@@ -59173,6 +59173,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rightHand: {fileID: 795045408}
   leftHand: {fileID: 1206197132}
+  layerToIgnoreForce:
+    serializedVersion: 2
+    m_Bits: 1024
   dieClip: {fileID: 8300000, guid: de51cd803066a1949bd97ef25ff1d1b2, type: 3}
   stepClip: {fileID: 8300000, guid: a7491591adbb79546b90e4c78867dfad, type: 3}
   ressurectFX: {fileID: 833765939}

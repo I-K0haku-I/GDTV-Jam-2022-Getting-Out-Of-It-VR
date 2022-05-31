@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[DefaultExecutionOrder(0)]
 public class PhysicsHand : MonoBehaviour
 {
     [SerializeField] PlayerHandler playerHandler;
@@ -67,8 +68,11 @@ public class PhysicsHand : MonoBehaviour
         Vector3 force = displacementFromResting * climbForce;
         float drag = GetDrag();
 
-        playerRb.AddForce(force, ForceMode.Acceleration);
-        playerRb.AddForce(drag * -playerRb.velocity * climbDrag, ForceMode.Acceleration);
+
+        playerHandler.AddNextForce(force, drag * -playerRb.velocity * climbDrag);
+
+        //playerRb.AddForce(force, ForceMode.Acceleration);
+        //playerRb.AddForce(drag * -playerRb.velocity * climbDrag, ForceMode.Acceleration);
     }
 
     private float GetDrag()

@@ -77,3 +77,4 @@ crashlytics-build.properties
 .vsconfig
 /Assets/_test/
 /Assets/TextMesh Pro/
+/Assets/Gorilla*
